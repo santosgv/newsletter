@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewsLetter Kids</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center">
+                <table border="0" cellspacing="0" cellpadding="0" style="max-width: 700px; width: 100%;">
+                    <tr>
+                        <td style="padding: 40px 20px; text-align: center;">
+                            <img src="https://mundocoloridokids.com.br/static/img/email.jpg", alt="Logo" width="50%">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 40px 20px; background-color: #ffffff;">
+                            <h1>Novos Desenhos</h1>
+                            <p>Olá,{{email}} Veja algumas das novidades de Hoje!</p>
+                            {% for post in posts %}
+                            <h1>{{ post.nome }}</h1>
+                            <p>{{ post.descricao }}</p>
+                            <a href="{{base_url}}desenho/{{post.nome}}">Visualizar</a>
+                            <hr>
+                            <br>
+                            {% endfor %}
+                            <p>Acesse Nossa Site para Ver mais <a href="{{base_url}}">Mundo Colorido Kids</a></p>
+                        </td>
+                    </tr>
+                   <tr>
+                    <td class="text-center">
+                        Esse email foi enviado para {{email}}
+                        <p>Se você não quer mais receber este email clique <a href="{{base_url}}unsubscriber/{{email.id}}" target="_blank" rel="noopener noreferrer">Cancelar</a></p>
+                    </td>
+                   </tr>
+                    <tr>
+                        <td style="text-align: center; padding: 20px; background-color: #f7f7f7;">
+                            &copy; 2024 Mundo Colorido Kids. Todos os direitos reservados.
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

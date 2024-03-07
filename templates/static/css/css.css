@@ -1,0 +1,42 @@
+:root {
+    --azul-celeste: #1E90FF;
+    --amarelo-sol:#f49e12;
+    --bage:#737171;
+    --agua-marinha:#7fffd4;
+    --branco:#fff;
+  }
+  
+  @font-face {
+    font-family:'minhafonte';
+    src:url("../css/font/angrybirds-regular.ttf");
+}
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+
+
+.carde {
+    margin: 8px;
+  }
+  .tmg {
+    max-height: 150px;
+    width: auto;
+  }
+  
+.pagination{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+  
